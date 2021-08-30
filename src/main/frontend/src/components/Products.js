@@ -18,17 +18,17 @@ class Products extends Component {
             this.setState({products: res.data})
         })
     }
-
+    
     render() {
         return (
             <div className="products-list">
                 <h1>Products</h1>
                 {this.state.products.map(product =>
                     <div key={product.id}>
-                        <h4>{product.name}</h4>
-                        <p>${product.price}</p>
-                        <p>Quantity: {product.quantity}</p>
-                        <p>{product.description}</p>
+                        <h4><a href={'http://localhost:3307/products/' + product.id}>{product.name}</a></h4>
+                        <span>${product.price}</span><br/>
+                        <span>Quantity: {product.quantity}</span><br/>
+                        <span>{product.description}</span><br/>
                     </div>
                 )}
             </div>
