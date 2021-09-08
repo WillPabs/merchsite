@@ -27,20 +27,18 @@ public class ProductController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Product> findProductById(@PathVariable int id) {
-        Optional<Product> product = Optional.ofNullable(service.getProductById(id));
-        return product.map(response -> ResponseEntity.ok().body(response))
-                        .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
-    }
-
-    @GetMapping("/{name}")
-    public Product findProductByName(@PathVariable String name) {
-        return service.getProductByName(name);
+    public Product findProductById(@PathVariable int id) {
+        return service.getProductById(id);
     }
 
     @PostMapping()
     public ResponseEntity<Product> addProduct(@RequestBody Product product) throws URISyntaxException {
-        Product result = service.saveProduct(product);
+        Product newProduct = new Product();
+        newProduct.setName(product.getName());
+        newProduct.setPrice(product.getPrice());
+        newProduct.setQuantity(product.getQuantity());
+        newProduct.setDescription(product.getDescription());
+        Product result = service.saveProduct(newProduct);
         return ResponseEntity.created(new URI("/products" + result.getId())).body(result);
     }
 

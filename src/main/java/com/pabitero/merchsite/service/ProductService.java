@@ -29,10 +29,6 @@ public class ProductService {
         return repository.findById(id).orElse(null);
     }
 
-    public Product getProductByName(String name) {
-        return repository.findByName(name);
-    }
-
     public String deleteProduct(int id) {
         repository.deleteById(id);
         return "Product #: " + id + " removed";
