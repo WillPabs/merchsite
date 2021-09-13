@@ -36,40 +36,40 @@ const AddProduct = () => {
             <div className='form-control'>
                 <label>Product Name</label>
                 <input 
-                    value={data.name}
-                    name='name'
-                    onChange={(e) => handle(e)}
                     type='text' 
+                    name='name'
+                    value={data.name}
+                    onChange={(e) => handle(e)}
                     placeholder='Add Product'
                 />
             </div>
             <div className='form-control'>
                 <label>Price</label>
                 <input 
-                    value={data.price}
-                    name='price'
-                    onChange={(e) => handle(e)}
                     type='text' 
+                    name='price'
+                    value={data.price}
+                    onChange={(e) => handle(e)}
                     placeholder='Add Price'
                 />
             </div>
             <div className='form-control'>
                 <label>Description</label>
                 <input 
-                    value={data.description}
-                    name='description'
-                    onChange={(e) => handle(e)}
                     type='text' 
+                    name='description'
+                    value={data.description}
+                    onChange={(e) => handle(e)}
                     placeholder='Add Description'
                 />
             </div>
             <div className='form-control'>
                 <label>Quantity</label>
                 <input 
-                    value={data.quantity}
-                    name='quantity'
-                    onChange={(e) => handle(e)}
                     type='text'
+                    name='quantity'
+                    value={data.quantity}
+                    onChange={(e) => handle(e)}
                     placeholder='Add Quantity'
                 />
             </div>
