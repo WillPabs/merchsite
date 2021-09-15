@@ -33,6 +33,7 @@ const AddProduct = () => {
 
     return (
         <form onSubmit={(e) => submitHandler(e)} className='add-form'> 
+            <h2>Create New Product</h2>
             <div className='form-control'>
                 <label>Product Name</label>
                 <input 
