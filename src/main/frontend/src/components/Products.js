@@ -19,14 +19,6 @@ const Products = () => {
         
     }, [])
 
-    const handleClick = () => {
-        
-    }
-
-    const handleSubmit = () => {
-        <AddProduct/>
-    }
-
     return (
         <div className="products-list">
             <h1>Products</h1>
