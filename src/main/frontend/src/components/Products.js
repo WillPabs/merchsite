@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import Product from './Product'
+import AddProduct from './AddProduct'
+import Button from './Button'
 
 const productsApi = axios.create({
     baseURL: `http://localhost:3307/products/`
@@ -8,6 +9,7 @@ const productsApi = axios.create({
 
 const Products = () => {
     const [products, setProducts] = useState([])
+    const [showAddProduct, setShowAddProduct] = useState(false)
 
     useEffect(() => {
         productsApi.get('/').then(res => {
@@ -16,6 +18,14 @@ const Products = () => {
         })
         
     }, [])
+
+    const handleClick = () => {
+        
+    }
+
+    const handleSubmit = () => {
+        <AddProduct/>
+    }
 
     return (
         <div className="products-list">
@@ -29,8 +39,9 @@ const Products = () => {
             ) : (
                 <h4>No Products</h4>
             )}
-            
-        </div>
+            <Button text="Add Product" onClick={() => setShowAddProduct(!showAddProduct)}/>
+            {showAddProduct && <AddProduct/>}
+        </div> 
     )
 }
 
