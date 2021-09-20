@@ -4,8 +4,13 @@ body {
   background-size: cover;
   margin-top: 80px;
   padding: 30px;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  text-align: center
 }
 
+/* APP */
 .App {
   color: white;
 }
@@ -48,25 +53,11 @@ nav li a {
 }
 
 /* LOGIN */
-.login-form {
-  display: flex;
-  justify-content: center;
-  padding-top: 50px;
-  text-align: center;
-}
-
 .login-form h2 {
   font-size: 60px;
 }
 
 /* ADD USER */
-.add-user-form {
-  display: flex;
-  justify-content: center;
-  padding-top: 50px;
-  text-align: center;
-}
-
 .add-user-form h2 {
   font-size: 40px;
 }
