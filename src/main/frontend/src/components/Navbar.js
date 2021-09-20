@@ -1,20 +1,12 @@
 import SearchBar from "./SearchBar";
-import { BrowserRouter as Router, Link, Route } from "react-router-dom";
-import Users from "./Users";
-import Products from "./Products";
-import About from "./About";
-import Contact from "./Contact"
-import Login from "./Login";
-import AddUser from "./AddUser";
-import Home from "./Home";
+import { Link } from "react-router-dom";
 
 const logo = "https://www.logolynx.com/images/logolynx/b2/b23666d57f4e17102209423105dfc442.png"
 
 const Navbar = () => {
     return (
-        <Router>
             <nav className="navbar">
-                <a href="#logo"><img src={logo} alt="logo"/></a>
+                <Link to="/"><img src={logo} alt="logo"/></Link>
                 <ul className="navbar-left">
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/users">Users</Link></li>
@@ -28,16 +20,6 @@ const Navbar = () => {
                 </ul>
                 <SearchBar/>
             </nav>
-            <div className="routes">
-                <Route exact path="/" component={Home}/>
-                <Route path="/users" component={Users}/>
-                <Route path="/products" component={Products}/>
-                <Route path="/about" component={About}/>
-                <Route path="/contact" component={Contact}/>
-                <Route path="/login" component={Login}/>
-                <Route path="/register" component={AddUser}/>
-            </div>
-        </Router>
     )
 }
 
