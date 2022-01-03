@@ -5,10 +5,11 @@ const Home = () => {
     return (
         <div className="homepage">
             <div>
-                <Button text="Login"><Link to="/login">Login</Link></Button>
+                <Link to="/login"><Button text="Login"></Button></Link>
             </div>
             <div>
-                <Button text="Register"><Link to="/register"></Link></Button>
+                
+                <Link to="/register"><Button text="Register"></Button></Link>
             </div>
         </div>
     )
