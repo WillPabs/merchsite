@@ -1,5 +1,5 @@
 # merchsite
-E-commerce site Java Spring Boot / React
+E-commerce site using Spring Boot / React
 
 This website allows users to register and login.
 
